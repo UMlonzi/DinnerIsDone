@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     color: '#E5DDDB',
-    width: '50%',
+    width: '15%',
   
   },
   button: {
@@ -75,18 +75,17 @@ const styles = StyleSheet.create({
 
   searchButton: {
     backgroundColor: '#E5DDDB',
-    height: 60,
-    width: Dimensions.get('screen').width - 60,
+    height: 75,
+    width: 100,
     borderRadius: 30,
     marginHorizontal: 10,
-    marginLeft: 10,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     position: 'absolute',
     top: 50,
     zIndex: 100,
-    padding: 20,
+    padding
   },
   searchButtonText: {
     fontSize: 16,

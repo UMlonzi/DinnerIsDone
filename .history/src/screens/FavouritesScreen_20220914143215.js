@@ -5,9 +5,11 @@ export default function FavouritesScreen() {
   return (
     <SafeAreaView>
       <Text style={styles.label}>My Favourite spots</Text>
+      <ScrollView>
         <FlatList>
-          
+
         </FlatList>
+      </ScrollView>
     </SafeAreaView>
   )
 }
@@ -19,6 +21,6 @@ const styles = StyleSheet.create({
     color: 'black',
     width: '70%',
     marginLeft: 15,
-    marginTop: 5,
+    marginTop: 30,
   },
 });

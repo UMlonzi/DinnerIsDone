@@ -1,4 +1,4 @@
-import TabNavigation from './src/navigation/tabNavigation';
+import TabNavigation from './src/navigation/';
 
 export default function App() {
   return (

@@ -5,7 +5,7 @@ export default function RestuarantReserved() {
   return (
     <SafeAreaView>
       <Text style={styles.label}>RestuarantReserved</Text>
-    </SafeAreaView>
+    </View>
   )
 }
 
@@ -16,6 +16,6 @@ const styles = StyleSheet.create({
     color: 'black',
     width: '70%',
     marginLeft: 15,
-    marginTop: 30,
+    marginTop: 5,
   },
 });

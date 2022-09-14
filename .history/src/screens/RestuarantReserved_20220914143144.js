@@ -1,11 +1,11 @@
-import { StyleSheet, SafeAreaView, Text } from 'react-native'
+import { StyleSheet, Safe, Text } from 'react-native'
 import React from 'react'
 
 export default function RestuarantReserved() {
   return (
-    <SafeAreaView>
+    <View>
       <Text style={styles.label}>RestuarantReserved</Text>
-    </SafeAreaView>
+    </View>
   )
 }
 
@@ -16,6 +16,6 @@ const styles = StyleSheet.create({
     color: 'black',
     width: '70%',
     marginLeft: 15,
-    marginTop: 30,
+    marginTop: 5,
   },
 });

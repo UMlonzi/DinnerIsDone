@@ -75,8 +75,8 @@ const styles = StyleSheet.create({
 
   searchButton: {
     backgroundColor: '#E5DDDB',
-    height: 60,
-    width: Dimensions.get('screen').width - 60,
+    height: 75,
+    width: 100,
     borderRadius: 30,
     marginHorizontal: 10,
     marginLeft: 10,

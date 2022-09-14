@@ -8,6 +8,7 @@ export default function FavouritesScreen() {
         <FlatList>
           
         </FlatList>
+      </ScrollView>
     </SafeAreaView>
   )
 }

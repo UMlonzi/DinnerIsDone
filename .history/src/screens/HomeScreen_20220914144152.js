@@ -14,16 +14,13 @@ export default function HomeScreen() {
   return (
     
     <View>
-      <Text style={styles.title}>
-        Dinner is Done
-        <Pressable
-          style={styles.searchButton}
-          onPress={() => navigation.navigate('Search')}>
-          <Fontisto name="search" size={25} color={'#8C7C34'} />
-            <Text style={styles.searchButtonText}>Where are you going?</Text>
-        </Pressable>
-      </Text>
-    
+      <Text style={styles.title}>Dinner is Done</Text>
+    <Pressable
+      style={styles.searchButton}
+      onPress={() => navigation.navigate('Search')}>
+      <Fontisto name="search" size={25} color={'#8C7C34'} />
+      <Text style={styles.searchButtonText}>Where are you going?</Text>
+    </Pressable>
 
     <Image
       source={require('../../assets/images/wallpaper.png')}
@@ -43,19 +40,17 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   image: {
-    width: '97%',
-    height: '35%',
+    width: '75%',
+    height: '75%',
     resizeMode: 'cover',
     justifyContent: 'center',
-    marginLeft: 5,
-
   },
   title: {
     fontSize: 20,
     fontWeight: 'bold',
     color: '#E5DDDB',
-    width: '50%',
-  
+    width: '70%',
+    marginLeft: 25,
   },
   button: {
     backgroundColor: '#E5DDDB',
@@ -76,17 +71,15 @@ const styles = StyleSheet.create({
   searchButton: {
     backgroundColor: '#E5DDDB',
     height: 60,
-    width: Dimensions.get('screen').width - 60,
+    width: Dimensions.get('screen').width - 20,
     borderRadius: 30,
     marginHorizontal: 10,
-    marginLeft: 10,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     position: 'absolute',
     top: 50,
     zIndex: 100,
-    padding: 20,
   },
   searchButtonText: {
     fontSize: 16,

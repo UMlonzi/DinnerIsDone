@@ -1,9 +1,9 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeScreen from '../screens/HomeScreen';
-import SearchScreen from '../screens/SearchScreen';
-import FavouritesScreen from '../screens/FavouritesScreen';
-import RestuarantReserved from '../screens/RestuarantReserved';
+import HomeScreen from '';
+import SearchScreen from './src/screens/SearchScreen';
+import FavouritesScreen from './src/screens/FavouritesScreen';
+import RestuarantReserved from './src/screens/RestuarantReserved';
 
 import {Entypo } from '@expo/vector-icons';
 

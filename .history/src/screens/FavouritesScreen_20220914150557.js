@@ -1,10 +1,12 @@
-import { StyleSheet, SafeAreaView, Text } from 'react-native'
+import { StyleSheet, SafeAreaView, Text, ScrollView, FlatList } from 'react-native'
 import React from 'react'
 
-export default function RestuarantReserved() {
+export default function FavouritesScreen() {
   return (
     <SafeAreaView>
-      <Text style={styles.label}>RestuarantReserved</Text>
+      <Text style={styles.label}>My Favourite spots</Text>
+      <ScrollView>
+      </ScrollView>
     </SafeAreaView>
   )
 }

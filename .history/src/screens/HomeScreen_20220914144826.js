@@ -43,18 +43,18 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   image: {
-    width: '97%',
+    width: '92%',
     height: '35%',
     resizeMode: 'cover',
     justifyContent: 'center',
-    marginLeft: 5,
-
+    marginLeft: '10%',
+    
   },
   title: {
     fontSize: 20,
     fontWeight: 'bold',
     color: '#E5DDDB',
-    width: '50%',
+    width: '15%',
   
   },
   button: {
@@ -75,18 +75,16 @@ const styles = StyleSheet.create({
 
   searchButton: {
     backgroundColor: '#E5DDDB',
-    height: 60,
-    width: Dimensions.get('screen').width - 60,
+    height: "50%",
+    width: 50,
     borderRadius: 30,
     marginHorizontal: 10,
-    marginLeft: 10,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     position: 'absolute',
     top: 50,
     zIndex: 100,
-    padding: 20,
   },
   searchButtonText: {
     fontSize: 16,
