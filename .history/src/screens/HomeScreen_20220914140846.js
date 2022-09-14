@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     marginLeft: 25,
   },
   button: {
-    backgroundColor: '#E5DDDB',
+    backgroundColor: '#fff',
     width: 200,
     height: 40,
     borderRadius: 10,
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   },
 
   searchButton: {
-    backgroundColor: '#E5DDDB',
+    backgroundColor: '#fff',
     height: 60,
     width: Dimensions.get('screen').width - 20,
     borderRadius: 30,

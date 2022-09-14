@@ -16,7 +16,7 @@ export default function HomeScreen() {
     <Pressable
       style={styles.searchButton}
       onPress={() => navigation.navigate('Search')}>
-      <Fontisto name="search" size={25} color={'#8C7C34'} />
+      <Fontisto name="search" size={25} color={'#f15454'} />
       <Text style={styles.searchButtonText}>Where are you going?</Text>
     </Pressable>
 
@@ -47,12 +47,12 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 80,
     fontWeight: 'bold',
-    color: '#E5DDDB',
+    color: 'white',
     width: '70%',
     marginLeft: 25,
   },
   button: {
-    backgroundColor: '#E5DDDB',
+    backgroundColor: '#fff',
     width: 200,
     height: 40,
     borderRadius: 10,
@@ -64,11 +64,11 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#8C7C34'
+    color: ''
   },
 
   searchButton: {
-    backgroundColor: '#E5DDDB',
+    backgroundColor: '#fff',
     height: 60,
     width: Dimensions.get('screen').width - 20,
     borderRadius: 30,

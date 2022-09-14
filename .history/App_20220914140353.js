@@ -19,11 +19,9 @@ const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer   >
+    <NavigationContainer>
        
     <Tab.Navigator
-
-    
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
@@ -44,13 +42,9 @@ export default function App() {
           return <Entypo name={iconName} size={size} color={color} />;
          
         },
-        tabBarActiveTintColor: '#8C7C34',
+        tabBarActiveTintColor: '#',
         tabBarInactiveTintColor: '#29281D',
-        tabBarStyle: {backgroundColor: '#E5DDDB'},
-        headerShown: false
-        
       })}
-      
     >
       <Tab.Screen name="Home" component={HomeScreen} />
       
@@ -64,3 +58,12 @@ export default function App() {
   
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
