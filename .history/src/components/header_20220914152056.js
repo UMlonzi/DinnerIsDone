@@ -1,8 +1,10 @@
 import React from 'react';
 import { Image, View } from 'react-native';
-import { Ionicons } from '@expo/vector-icons'
+import { Ionicons } from '@expo/vector-icons';
+import { Header } from 'react-native/Libraries/NewAppScreen';
 
-export default function Header() {
+export default Header {
+  render() {
     return (
       <View>
         <Image
@@ -13,3 +15,4 @@ export default function Header() {
       </View>
     )
   }
+}
