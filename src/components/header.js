@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
 import logo from '../../assets/Logo.png';
@@ -34,3 +35,20 @@ const styles = StyleSheet.create({
     padding: 10,
   }
 })
+=======
+import React from 'react';
+import { Image, View } from 'react-native';
+import { Ionicons } from '@expo/vector-icons'
+
+export default function Header() {
+    return (
+      <View>
+        <Image
+      source={require('../../assets/Logo.png')}
+      style={styles.image}>
+    </Image>
+    <Ionicons name="md-person-circle" size={24} color="black" />
+      </View>
+    )
+  }
+>>>>>>> b022fd81c1ad5627b6125445b5104237d3e11276
