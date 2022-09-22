@@ -43,7 +43,7 @@ export default function TabNavigation() {
         tabBarActiveTintColor: '#8C7C34',
         tabBarInactiveTintColor: '#29281D',
         tabBarStyle: {backgroundColor: '#E5DDDB'},
-        headerShown: false
+        headerShown: true,
         
       })}
       
