@@ -10,10 +10,8 @@ export default function SearchScreen() {
       <Text style={styles.label2} >Cuisines</Text>
         <ScrollView style={styles.scroll}  horizontal={true} vertical={true} >
             <TouchableOpacity style={styles.cuisine} >
-                <Image
-                source={require('../../assets/italian.jpg')}
-                >
-
+                <Image>
+                    
                 </Image>
             </TouchableOpacity>
             <TouchableOpacity style={styles.cuisine} >
@@ -102,8 +100,5 @@ const styles = StyleSheet.create({
         },
         scrol2: {
             marginBottom: 50,
-        },
-        image : {
-
         },
 })

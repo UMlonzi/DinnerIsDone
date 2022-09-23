@@ -38,7 +38,7 @@ const login = () => {
              alert(error)
          })
          Alert.alert(
-             'Login Successful. Welcome To Dinner Is Done',
+             'Login Successful. Welcome To Din',
          );
          navigation.navigate('Home')
      }

@@ -103,7 +103,5 @@ const styles = StyleSheet.create({
         scrol2: {
             marginBottom: 50,
         },
-        image : {
-
-        },
+        im
 })

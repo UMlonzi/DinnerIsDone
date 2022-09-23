@@ -4,7 +4,7 @@ import TabNavigation from './src/navigation/tabNavigation';
 export default function App() {
   return (
 <>
-   
+    <Header/>
       <TabNavigation />
     </>  
   );

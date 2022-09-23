@@ -38,59 +38,14 @@ const login = () => {
              alert(error)
          })
          Alert.alert(
-             'Login Successful. Welcome To Dinner Is Done',
+             'Login Successful. Welcome To Your Journal Diary',
          );
          navigation.navigate('Home')
      }
 
   return (
-    <View style={styles.container} >
-         <FirebaseRecaptchaVerifierModal
-             ref={recaptchaVerifier}
-             firebaseConfig={firebaseConfig}
-             />
-             <Image
-             source={require('../../assets/Logo.png')}
-             style={styles.image}>
-             </Image>
-             <Text style={styles.title} >Sign In</Text>
-            <Text style={styles.txt}>Phone Number</Text>
-      <TextInput
-                 
-                 onChangeText={setPhoneNumber}
-                 keyboardType='phone-pad'
-                 autoCompleteType='tel'
-                 style={styles.textInput}
-                 />
-                 <TouchableOpacity style={styles.sendVerification} onPress={sendVerification}>
-                     <Text style={styles.buttonText}>
-                     Submit
-                     </Text>
-                 </TouchableOpacity>
-                 <Text style={styles.txt}>OTP</Text>
-                 <TextInput
-                 placeholder=''
-                 onChangeText={setCode}
-                 keyboardType='number-pad'
-                 style={styles.textInput}
-                 />
-                  <Text style={styles.span} 
-            onPress={() => navigation.navigate('login')}
-            >
-                Sign-in using email
-            </Text>
-                        <TouchableOpacity style={styles.sendCode}
-                        onPress = {confirmCode} >
-                     <Text style={styles.buttonText}>
-                     Sign In
-                     </Text>
-                     
-                 </TouchableOpacity>
-                 <Text style={styles.span2} 
-            onPress={() => navigation.navigate('register')}
-            >
-                Not registered? Sign up
-            </Text>
+    <View>
+      <Text>login</Text>
     </View>
   )
 }
