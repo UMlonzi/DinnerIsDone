@@ -1,22 +1,21 @@
-import { createStackNavigator } from "@react-navigation/native-stack"
-import { createAppContainer } from "react-navigation";
+import * as React from 'react';
+import { View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginOTP from "../screens/LoginOTP";
-import LoginEmail from "../screens/LoginEmail.js";
+import Login from "../screens/Login"
 import TabNavigation from "./tabNavigation";
 
-const screens = {
-    LoginOTP: {
-        screen: LoginOTP
-    },
-    LoginEmail: {
-        screen: LoginEmail
-    },
-    Home: {
-        screen: TabNavigation
-    },
-}
+const StackNavigation = createNativeStackNavigator();
 
-
-const StackNavigation = createStackNavigator(screens);
-
-export default createAppContainer(StackNavigation);
+export default function StackNavigator() {
+    return (
+        <NavigationContainer>
+            <StackNavigation.Navigator>
+                <StackNavigation.Screen name="LoginEmail" component={Login} />
+                <StackNavigation.Screen name="LoginOTP" component={LoginOTP} />
+                <StackNavigation.Screen name="TabNavigation" component={TabNavigation} />
+            </StackNavigation.Navigator>
+        </NavigationContainer>
+    );
+};

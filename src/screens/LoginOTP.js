@@ -40,7 +40,7 @@ const login = () => {
          Alert.alert(
              'Login Successful. Welcome To Dinner Is Done',
          );
-         navigation.navigate('Home')
+         navigation.navigate('TabNavigation')
      }
 
   return (
@@ -75,7 +75,7 @@ const login = () => {
                  style={styles.textInput}
                  />
                   <Text style={styles.span} 
-            onPress={() => navigation.navigate('login')}
+            onPress={() => navigation.navigate('Login')}
             >
                 Sign-in using email
             </Text>
