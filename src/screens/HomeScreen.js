@@ -10,7 +10,30 @@ export default function HomeScreen() {
 
   const navigation = useNavigation();
 
-
+  const [users , setUsers]= useState([]);
+  const restaurantRef = firebase.firestore().collection('restaurants');
+ async function getData(){
+      restaurantRef
+      .onSnapshot(
+          querySnapshot=>{
+              const users = []
+              querySnapshot.forEach((doc)=>{
+                  const{ name,place, website,image} = doc.data()
+                  users.push({
+                      id:doc.id,
+                      name,
+                      place,
+                      website,
+                      image,
+                  })
+              })
+              setUsers(users)
+          }
+      )
+  }
+  useEffect(()=>{
+      getData();
+  },[])
   return (
     
     <View>
