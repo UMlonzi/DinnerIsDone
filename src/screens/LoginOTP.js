@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity, TextInput, StyleSheet, Alert, Image} from
 import React, { useRef, useState} from 'react'
 import { FirebaseRecaptchaVerifierModal } from 'expo-firebase-recaptcha';
 import firebase from 'firebase/compat/app'
-import { firebaseConfig } from '../../config';
+import { firebaseConfig } from '../Config';
 import { useNavigation } from '@react-navigation/native'
 
 const login = () => {
