@@ -1,21 +1,145 @@
 import { SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
 import React from 'react'
+import {useState, useEffect} from 'react';
+import { firebase } from '../Config';
 
 
 export default function SearchScreen() {
+
+
+  const [users , setUsers]= useState([]);
+  const [loading, setLoading]=useState(false);
+  const restaurantRef = firebase.firestore().collection('categories');
+  async function getData(){
+      restaurantRef
+      .onSnapshot(
+          querySnapshot=>{
+              const users = []
+              querySnapshot.forEach((doc)=>{
+                  const{ name,Address, website,image} = doc.data()
+                  users.push({
+                      id:doc.id,
+                      name,
+                      Address,
+                      website,
+                      image,
+                  })
+              })
+              setUsers(users)
+          }
+      )
+  }
+  useEffect(()=>{
+      getData();
+  },[])
   return (
     <SafeAreaView>
-      <Text style={styles.label} >Filter search by</Text>
+        
+        <Image
+      source={require('../../assets/images/wallpaper.png')}
+      style={styles.image}>
+
+    </Image>
+        
+     
+    
+    <View 
+
+     style={styles.line}
+     />
+     <View>
+     <Text style={styles.label} >Filter search by</Text>
+
+     </View>
+      
       <ScrollView style={styles.scrol2} >
       <Text style={styles.label2} >Cuisines</Text>
         <ScrollView style={styles.scroll}  horizontal={true} vertical={true} >
-            <TouchableOpacity style={styles.cuisine} >
-                <Image
+            
+            <TouchableOpacity style={styles.cuisine}
+              data={users}
+              // numColumns={2}
+              renderItem={({item})=>(
+            <View style={styles.container2}>
+
+<Text style={styles.txt} >Italian</Text>
+
+                    {/* <Text style={styles.name}>{item.name}</Text>
+                    <Text style={styles.name}>{item.Address}</Text> */}
+
+                    </View>
+                )}
+                
+      />
+      
+      {/* <Text style={styles.label2} >Category</Text> */}
+        {/* // //     <TouchableOpacity style={styles.cuisine} */}
+        {/* //       data={users}
+        //       // numColumns={2}
+        //       renderItem={({item})=>(
+
+        //         <View style={styles.container2}> */}
+{/*                
+        //             <Text style={styles.label}>{item.name}</Text>
+             
+        //             <Text style={styles.address}>{item.Address}</Text>
+                    
+        //              <Text style={styles.address}>{item.Address}</Text>
+        //        </View>
+        //         )}
+        // //    />
+        //     <TouchableOpacity style={styles.cuisine}
+        //       data={users} */}
+        {/* //       // numColumns={2}
+        //       renderItem={({item})=>( */}
+{/* 
+                <View style={styles.container2}>
+               
+                    <Text style={styles.label}>{item.name}</Text>
+             
+                    <Text style={styles.address}>{item.Address}</Text>
+                    
+                     <Text style={styles.address}>{item.Address}</Text>
+               </View>
+                )}
+           />
+        //     <TouchableOpacity style={styles.cuisine}
+              data={users} */}
+              {/* // numColumns={2}
+              renderItem={({item})=>(
+
+                <View style={styles.container2}>
+               
+        //             <Text style={styles.label}>{item.name}</Text>
+             
+        //             <Text style={styles.address}>{item.Address}</Text>
+                    
+        //              <Text style={styles.address}>{item.Address}</Text>
+        //        </View>
+        //         )}
+        //    />
+        //     <TouchableOpacity style={styles.cuisine}
+              data={users} */}
+              {/* // numColumns={2}
+              renderItem={({item})=>( */}
+{/* 
+        //         <View style={styles.container2}>
+               
+        //             <Text style={styles.name}>{item.name}</Text>
+             
+        //             <Text style={styles.address}>{item.Address}</Text>
+                    
+        //              <Text style={styles.address}>{item.Address}</Text>
+        //        </View>
+        //         )}
+        //    /> */}
+                {/* <Image
                 source={require('../../assets/italian.jpg')}
                 >
 
-                </Image>
-            </TouchableOpacity>
+                // </Image> */}
+                
+            {/* </TouchableOpacity>
             <TouchableOpacity style={styles.cuisine} >
                 <Text style={styles.txt} >Mexican</Text>
             </TouchableOpacity>
@@ -27,9 +151,9 @@ export default function SearchScreen() {
             </TouchableOpacity>
             <TouchableOpacity style={styles.cuisine} >
                 <Text style={styles.txt} >Kota</Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
         </ScrollView>
-        <Text style={styles.label2} >Category</Text>
+        {/* <Text style={styles.label2} >Category</Text>
         <ScrollView style={styles.scroll}  horizontal={true} vertical={true} >
             <TouchableOpacity style={styles.cuisine} >
                 <Text style={styles.txt} >Indian</Text>
@@ -57,11 +181,11 @@ export default function SearchScreen() {
             </TouchableOpacity>
             <TouchableOpacity style={styles.budget} >
                 <Text style={styles.txt} >Italian</Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
             
         </ScrollView>
        
-        </ScrollView>
+        {/* </ScrollView> */}
     </SafeAreaView>
   )
 }
@@ -73,13 +197,24 @@ const styles = StyleSheet.create({
         color: 'black',
         width: '70%',
         marginLeft: 15,
-        marginTop: 30,
+        marginTop: 130,
+        position:'absolute'
     },
     cuisine : {
     padding: 60,
     width: '18%',
     margin: 10,
     backgroundColor: '#f9f9f9'
+    
+    },
+    name:{
+        fontWeight:'bold',
+         position:"absolute",
+        fontSize: 20,
+        top:270,
+        left:153,
+        backgroundColor:'red',
+        color:'blue'
     },
     scroll :{
         flexDirection: 'row',
@@ -91,8 +226,8 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: 'black',
         width: '70%',
-        marginLeft: 25,
-        marginTop: 5,
+        marginLeft: 17,
+        marginTop: 185,
     }, 
     budget : {
         padding: 60,
@@ -104,6 +239,28 @@ const styles = StyleSheet.create({
             marginBottom: 50,
         },
         image : {
-
+            width: '30%',
+            height: '15%',
+            resizeMode: 'cover',
+            justifyContent: 'center',
+            // marginLeft: 5,
+            position:"absolute",
+            top:10,
+            left:10,
         },
+        line:{
+            height:1,
+            width:"100%",
+            backgroundColor: 'black',
+            position:"absolute",
+            top:110,
+          },
+          container2: {
+            flex: 1,
+            // backgroundColor: '#fff',
+        
+          },
+          txt:{
+            color:'red'
+          }
 })
