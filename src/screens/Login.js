@@ -20,6 +20,11 @@ export default function Login({ navigation }) {
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('LoginOTP')}>
                     <Text style={styles.buttonText}>Login with OTP</Text>
                 </TouchableOpacity>
+                <Text style={styles.span2} 
+            onPress={() => navigation.navigate('register')}
+            >
+                Not registered? Sign up
+            </Text>
             </View>
         </View>
     );

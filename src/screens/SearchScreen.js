@@ -1,4 +1,4 @@
-import { SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
+import { SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View, BackgroundImage, Image } from 'react-native'
 import React from 'react'
 
 
@@ -10,23 +10,19 @@ export default function SearchScreen() {
       <Text style={styles.label2} >Cuisines</Text>
         <ScrollView style={styles.scroll}  horizontal={true} vertical={true} >
             <TouchableOpacity style={styles.cuisine} >
-                <Image
-                source={require('../../assets/italian.jpg')}
-                >
-
-                </Image>
+            <Text style={styles.txt} >Italian</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.cuisine} >
                 <Text style={styles.txt} >Mexican</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.cuisine} >
-                <Text style={styles.txt} >Italian</Text>
+                <Text style={styles.txt} >Mediterranean</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.cuisine} >
                 <Text style={styles.txt} >Indian</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.cuisine} >
-                <Text style={styles.txt} >Kota</Text>
+                <Text style={styles.txt} >Chinese</Text>
             </TouchableOpacity>
         </ScrollView>
         <Text style={styles.label2} >Category</Text>
@@ -77,7 +73,7 @@ const styles = StyleSheet.create({
     },
     cuisine : {
     padding: 60,
-    width: '18%',
+    width: '22%',
     margin: 10,
     backgroundColor: '#f9f9f9'
     },
